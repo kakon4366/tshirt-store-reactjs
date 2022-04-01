@@ -10,7 +10,7 @@ const TopHeader = ({ dark, darkHandler }) => {
 	console.log(dark);
 
 	return (
-		<div className="border-b-4 py-1 bg-slate-200 dark:bg-slate-900">
+		<div className="border-b-2 dark:border-gray-700 py-1 bg-slate-200 dark:bg-slate-900">
 			<div className="container mx-auto">
 				<div className="text-right">
 					<small className="mr-12 dark:text-white">
