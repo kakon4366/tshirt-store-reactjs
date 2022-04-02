@@ -1,11 +1,11 @@
 import React from "react";
 import { BeakerIcon, TrashIcon } from "@heroicons/react/solid";
 
-const Cart = ({ tshirt }) => {
+const Cart = ({ tshirt, removeTshirt }) => {
 	const { name, picture, price } = tshirt;
 	return (
 		<div className="bg-slate-200 border-slate-400 border rounded p-3 flex my-3">
-			<div className="w-32 h-24 overflow-hidden rounded-full">
+			<div className="w-32 h-24 overflow-hidden rounded-full border border-slate-400">
 				<img src={picture} alt="" />
 			</div>
 			<div className="flex justify-between w-full ml-3">
@@ -16,7 +16,10 @@ const Cart = ({ tshirt }) => {
 					</h4>
 				</div>
 				<div className=" flex items-center justify-center">
-					<button className="bg-red-200 p-3 rounded-full">
+					<button
+						onClick={() => removeTshirt(tshirt)}
+						className="bg-red-200 p-3 rounded-full"
+					>
 						<TrashIcon className="h-7 w-7 text-red-500"></TrashIcon>
 					</button>
 				</div>

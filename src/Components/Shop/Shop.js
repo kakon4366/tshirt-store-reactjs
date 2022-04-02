@@ -17,6 +17,13 @@ const Shop = () => {
 		}
 	};
 
+	const removeTshirt = (selectedTshirt) => {
+		const riminingTshirt = cart.filter(
+			(tshirt) => tshirt._id !== selectedTshirt._id
+		);
+		setCart(riminingTshirt);
+	};
+
 	return (
 		<section className="my-12">
 			<div className="container mx-auto">
@@ -44,7 +51,11 @@ const Shop = () => {
 						<div>
 							<h2>Select Item: {cart.length}</h2>
 							{cart.map((tshirt) => (
-								<Cart key={tshirt._id} tshirt={tshirt}></Cart>
+								<Cart
+									removeTshirt={removeTshirt}
+									key={tshirt._id}
+									tshirt={tshirt}
+								></Cart>
 							))}
 						</div>
 					</div>
