@@ -1,10 +1,26 @@
 import React from "react";
+import { BeakerIcon, TrashIcon } from "@heroicons/react/solid";
 
 const Cart = ({ tshirt }) => {
 	const { name, picture, price } = tshirt;
 	return (
-		<div>
-			<h2>{name}</h2>
+		<div className="bg-slate-200 border-slate-400 border rounded p-3 flex my-3">
+			<div className="w-32 h-24 overflow-hidden rounded-full">
+				<img src={picture} alt="" />
+			</div>
+			<div className="flex justify-between w-full ml-3">
+				<div>
+					<h2 className="text-3xl">{name}</h2>
+					<h4 className="text-xl">
+						Price: $<span>{price}</span>
+					</h4>
+				</div>
+				<div className=" flex items-center justify-center">
+					<button className="bg-red-200 p-3 rounded-full">
+						<TrashIcon className="h-7 w-7 text-red-500"></TrashIcon>
+					</button>
+				</div>
+			</div>
 		</div>
 	);
 };
