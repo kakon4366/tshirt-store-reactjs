@@ -25,12 +25,12 @@ const Shop = () => {
 	};
 
 	return (
-		<section className="my-12">
+		<section className="py-12 dark:bg-slate-900">
 			<div className="container mx-auto">
-				<h2 className="text-4xl text-center font-semibold">
+				<h2 className="text-4xl dark:text-white text-center font-semibold">
 					Buying your favorite T-shirts
 				</h2>
-				<h4>Total Items: {tshirts.length}</h4>
+				<h4 className="dark:text-white">Total Items: {tshirts.length}</h4>
 				<hr />
 				<br />
 				<div className="grid grid-cols-3 gap-8">
@@ -43,7 +43,7 @@ const Shop = () => {
 							></TshirtItem>
 						))}
 					</div>
-					<div className="bg-purple-200 rounded p-4 pt-12">
+					<div className="bg-purple-200 dark:bg-[#111] dark:text-slate-200 rounded p-4 pt-12">
 						<h2 className="text-2xl font-semibold text-center">
 							Order Summary
 						</h2>
@@ -57,6 +57,13 @@ const Shop = () => {
 									tshirt={tshirt}
 								></Cart>
 							))}
+						</div>
+						<div className="my-12 text-center">
+							{cart.length !== 0 && (
+								<button className="bg-blue-500 dark:bg-slate-700 dark:hover:bg-black dark:hover:border dark:hover:border-slate-700 text-white text-xl uppercase font-semibold py-3 w-full rounded ">
+									Order Review
+								</button>
+							)}
 						</div>
 					</div>
 				</div>
