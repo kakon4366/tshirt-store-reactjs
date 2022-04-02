@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import useTshirt from "../../Hooks/useTshirt";
 import Cart from "../Cart/Cart";
 import TshirtItem from "../TshirtItem/TshirtItem";
@@ -22,6 +23,12 @@ const Shop = () => {
 			(tshirt) => tshirt._id !== selectedTshirt._id
 		);
 		setCart(riminingTshirt);
+	};
+
+	const navigate = useNavigate();
+
+	const handlerNavigate = () => {
+		navigate("/order-review");
 	};
 
 	return (
@@ -60,9 +67,15 @@ const Shop = () => {
 						</div>
 						<div className="my-12 text-center">
 							{cart.length !== 0 && (
-								<button className="bg-blue-500 dark:bg-slate-700 dark:hover:bg-black dark:hover:border dark:hover:border-slate-700 text-white text-xl uppercase font-semibold py-3 w-full rounded ">
-									Order Review
-								</button>
+								<div>
+									<button
+										onClick={handlerNavigate}
+										className="bg-blue-500 dark:bg-slate-700 dark:hover:bg-black dark:hover:border dark:hover:border-slate-700 text-white text-xl uppercase font-semibold py-3 w-full rounded"
+									>
+										Order Review
+									</button>
+									<Link to="/order-review">Review</Link>
+								</div>
 							)}
 						</div>
 					</div>
