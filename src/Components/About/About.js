@@ -53,7 +53,7 @@ const About = () => {
 					<div>
 						<Link
 							to={"/about/social-media"}
-							className="border rounded border-blue-700 bg-blue-500 hover:bg-slate-200 text-slate-200 hover:text-black py-2 px-12 text-2xl font-semibold mb-8"
+							className="border rounded border-blue-700 bg-blue-500 hover:bg-slate-200 text-slate-200 hover:text-black py-2 px-12 text-2xl font-semibold mb-8 mr-3"
 						>
 							Social Media
 						</Link>
