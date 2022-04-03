@@ -8,7 +8,9 @@ import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import Linkedin from "./Components/Linkedin/Linkedin";
 import OrderReview from "./Components/OrderReview/OrderReview";
+import Profile from "./Components/Profile/Profile";
 import Shop from "./Components/Shop/Shop";
+import SocialMedia from "./Components/SocialMedia/SocialMedia";
 import TopHeader from "./Components/TopHeader/TopHeader";
 import Youtube from "./Components/Youtube/Youtube";
 
@@ -31,9 +33,18 @@ function App() {
 				<Route path="/" element={<Home></Home>}></Route>
 				<Route path="/home" element={<Home></Home>}></Route>
 				<Route path="/about" element={<About></About>}>
-					<Route path="facebook" element={<Facebook></Facebook>}></Route>
-					<Route path="youtube" element={<Youtube></Youtube>}></Route>
-					<Route path="linkedin" element={<Linkedin></Linkedin>}></Route>
+					<Route path="/about/social-media" element={<SocialMedia />}>
+						<Route path="facebook" element={<Facebook />}></Route>
+						<Route
+							path="/about/social-media/youtube"
+							element={<Youtube />}
+						></Route>
+						<Route
+							path="/about/social-media/linkedin"
+							element={<Linkedin />}
+						></Route>
+					</Route>
+					{/* <Route path="profile" element={<Profile></Profile>}></Route> */}
 				</Route>
 				<Route path="/shop" element={<Shop></Shop>}></Route>
 				<Route

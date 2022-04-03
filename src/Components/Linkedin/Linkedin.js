@@ -7,8 +7,8 @@ const Linkedin = () => {
 				src="https://www.linkedin.com/embed/feed/update/urn:li:share:6890347773980483584"
 				height="330"
 				width="504"
-				frameborder="0"
-				allowfullscreen=""
+				frameBorder="0"
+				allowFullScreen=""
 				title="Embedded post"
 			></iframe>
 		</div>

@@ -47,30 +47,29 @@ const About = () => {
 						</button>
 					</div>
 				</div>
-
 				{/* social media section  */}
-				<div className="my-28">
-					<h2 className="text-2xl font-semibold mb-8">Social Media</h2>
-					<Link
-						className="bg-blue-500 mr-3 py-3 px-12 text-white text-xl rounded"
-						to="/about/facebook"
-					>
-						Facebook
-					</Link>
-					<Link
-						className="bg-[#FF0000] mr-3 py-3 px-12 text-white text-xl rounded"
-						to="/about/youtube"
-					>
-						Youtube
-					</Link>
-					<Link
-						className="bg-[#0A65C0] mr-3 py-3 px-12 text-white text-xl rounded"
-						to="/about/linkedin"
-					>
-						Linkedin
-					</Link>
-					<div className="mt-6">
-						<Outlet></Outlet>
+				<div className="flex my-28">
+					{/* social medea component here  */}
+					<div>
+						<Link
+							to={"/about/social-media"}
+							className="text-2xl font-semibold mb-8"
+						>
+							Social Media
+						</Link>
+						<div className="mt-12">
+							<Outlet></Outlet>
+						</div>
+					</div>
+
+					<div className="mx-auto">
+						<h2 className="text-2xl font-semibold mb-8">My Details</h2>
+						<div>
+							<Link to="/about/profile">Profile</Link>
+							<Link to="/about/intrest">Intrest</Link>
+							<Link to="/about/personality">Personality</Link>
+							<Link to="/about/tour">Tour</Link>
+						</div>
 					</div>
 				</div>
 			</div>
