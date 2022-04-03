@@ -9,9 +9,11 @@ const About = () => {
 				<h1 className="text-4xl text-center uppercase font-semibold">
 					About Me
 				</h1>
-				<div className="mt-20 flex">
-					<img className="rounded w-[500px]" src={profilePhoto} alt="" />
-					<div className="ml-12">
+				<div className="mt-20 lg:flex">
+					<div className="lg:w-1/3">
+						<img className="rounded w-full" src={profilePhoto} alt="" />
+					</div>
+					<div className="lg:ml-12 lg:w-2/3">
 						<h2 className="text-4xl font-semibold">Kakon Barman</h2>
 						<h4 className="text-1xl">Web Developer</h4>
 						<br />
