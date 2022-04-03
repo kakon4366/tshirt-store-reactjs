@@ -1,9 +1,10 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 import profilePhoto from "../../images/kakon.jpg";
 
 const About = () => {
 	return (
-		<section className="py-28 ">
+		<section className="py-20 ">
 			<div className="container mx-auto">
 				<h1 className="text-4xl text-center uppercase font-semibold">
 					About Me
@@ -44,6 +45,32 @@ const About = () => {
 						<button className="bg-blue-500 py-2 px-12 text-white rounded mt-8 hover:bg-blue-700 transition-all">
 							Learn More
 						</button>
+					</div>
+				</div>
+
+				{/* social media section  */}
+				<div className="my-28">
+					<h2 className="text-2xl font-semibold mb-8">Social Media</h2>
+					<Link
+						className="bg-blue-500 mr-3 py-3 px-12 text-white text-xl rounded"
+						to="/about/facebook"
+					>
+						Facebook
+					</Link>
+					<Link
+						className="bg-[#FF0000] mr-3 py-3 px-12 text-white text-xl rounded"
+						to="/about/youtube"
+					>
+						Youtube
+					</Link>
+					<Link
+						className="bg-[#0A65C0] mr-3 py-3 px-12 text-white text-xl rounded"
+						to="/about/linkedin"
+					>
+						Linkedin
+					</Link>
+					<div className="mt-6">
+						<Outlet></Outlet>
 					</div>
 				</div>
 			</div>
