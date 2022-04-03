@@ -7,8 +7,8 @@ import Facebook from "./Components/Facebook/Facebook";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import Linkedin from "./Components/Linkedin/Linkedin";
+import MyDetails from "./Components/MyDetails/MyDetails";
 import OrderReview from "./Components/OrderReview/OrderReview";
-import Profile from "./Components/Profile/Profile";
 import Shop from "./Components/Shop/Shop";
 import SocialMedia from "./Components/SocialMedia/SocialMedia";
 import TopHeader from "./Components/TopHeader/TopHeader";
@@ -44,7 +44,10 @@ function App() {
 							element={<Linkedin />}
 						></Route>
 					</Route>
-					{/* <Route path="profile" element={<Profile></Profile>}></Route> */}
+					<Route
+						path="/about/my-details"
+						element={<MyDetails></MyDetails>}
+					></Route>
 				</Route>
 				<Route path="/shop" element={<Shop></Shop>}></Route>
 				<Route

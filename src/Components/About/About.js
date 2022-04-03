@@ -53,22 +53,18 @@ const About = () => {
 					<div>
 						<Link
 							to={"/about/social-media"}
-							className="text-2xl font-semibold mb-8"
+							className="border rounded border-blue-700 bg-blue-500 hover:bg-slate-200 text-slate-200 hover:text-black py-2 px-12 text-2xl font-semibold mb-8"
 						>
 							Social Media
 						</Link>
+						<Link
+							to={"/about/my-details"}
+							className="border rounded border-blue-700 bg-blue-500 hover:bg-slate-200 text-slate-200 hover:text-black py-2 px-12 text-2xl font-semibold mb-8"
+						>
+							My Details
+						</Link>
 						<div className="mt-12">
 							<Outlet></Outlet>
-						</div>
-					</div>
-
-					<div className="mx-auto">
-						<h2 className="text-2xl font-semibold mb-8">My Details</h2>
-						<div>
-							<Link to="/about/profile">Profile</Link>
-							<Link to="/about/intrest">Intrest</Link>
-							<Link to="/about/personality">Personality</Link>
-							<Link to="/about/tour">Tour</Link>
 						</div>
 					</div>
 				</div>
